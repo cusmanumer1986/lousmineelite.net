@@ -5,26 +5,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lousmine Elite</title>
-    <link href="/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body class="m-0 p-0 font-sans">
-    <section class="relative h-screen flex items-center justify-center text-white" style="background-image: url('/bg.jpeg'); background-size: cover; background-position: center;">
-      <!-- Logo -->
-      <div class="absolute top-4 left-4">
-        <img src="/logo.png" alt="Logo" class="h-16 w-auto" />
-      </div>
+    <header class="bg-[#0f172a] text-white px-6 py-4 flex justify-between items-center">
+      <img src="/logo.png" alt="Logo" class="h-10" />
+      <nav class="space-x-6">
+        <a href="#" class="hover:text-yellow-400">Home</a>
+        <a href="#about" class="hover:text-yellow-400">About Us</a>
+        <a href="#services" class="hover:text-yellow-400">Services</a>
+        <a href="#contact" class="hover:text-yellow-400">Booking</a>
+      </nav>
+    </header>
 
-      <!-- Text Section -->
-      <div class="text-center px-4 bg-black/60 p-6 rounded-lg">
-        <h1 class="text-4xl md:text-6xl font-bold">Lousmine Elite</h1>
-        <p class="text-lg md:text-xl mt-4 max-w-xl mx-auto">
-          It’s the beginning of your journey – where safety meets luxury and service meets excellence
-        </p>
-        <a href="#" class="mt-6 inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-6 py-3 rounded shadow">
+    <section class="relative h-screen text-white flex items-center justify-center text-center" style="background-image: url('/bg.jpeg'); background-size: cover; background-position: center;">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-bold">Welcome to Lousmine Elite</h1>
+        <a href="#contact" class="mt-6 inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-6 py-3 rounded shadow">
           BOOK NOW
         </a>
       </div>
     </section>
+
+    <section id="about" class="px-6 py-16 bg-white text-gray-800">
+      <h2 class="text-3xl font-bold mb-4 border-b-2 border-yellow-400 inline-block">ABOUT US</h2>
+      <p class="max-w-3xl leading-relaxed">
+        <strong>Lousmine Elite Travel & Hospitality</strong> is a premier provider of luxury travel experiences, tailored accommodation, and seamless airport services designed specifically for discerning travellers.
+      </p>
+    </section>
+
+    <section id="services" class="bg-gray-50 py-16 px-6">
+      <h2 class="text-3xl font-bold mb-10 border-b-2 border-yellow-400 inline-block">OUR SERVICES</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div><strong>Airport Pick-Up & Drop-Off</strong><br/>Reliable, on-time transfers from and to all major airports.</div>
+        <div><strong>VIP Transport</strong><br/>Exclusive rides with luxury vehicles and discreet service.</div>
+        <div><strong>Hotel Booking</strong><br/>Stays in top-tier hotels tailored for your needs.</div>
+        <div><strong>Business Travel</strong><br/>Support for executive-level travel and meetings.</div>
+        <div><strong>Medical Visit Support</strong><br/>Transport and stay coordination for medical tourism.</div>
+        <div><strong>City Tours & Events</strong><br/>Custom travel coordination, especially for Arab & Qatari guests.</div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-white px-6 py-16 text-gray-900">
+      <h2 class="text-3xl font-bold mb-6 border-b-2 border-yellow-400 inline-block">CONTACT US</h2>
+      <p><strong>Phone:</strong> +252614800313</p>
+      <p><strong>Email:</strong> lousmineelite@gmail.com</p>
+      <p><strong>WhatsApp:</strong> +44 7365 767244</p>
+    </section>
+
+    <footer class="text-center py-6 bg-[#0f172a] text-white text-sm">
+      &copy; 2025 Lousmine Elite Travel & Hospitality. All rights reserved.
+    </footer>
   </body>
 </html>
-
