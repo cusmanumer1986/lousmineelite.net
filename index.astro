@@ -1,178 +1,199 @@
 ---
-import "../../styles.css";
+import Layout from '../layouts/Layout.astro'
+import { SEO } from '../components/SEO.astro'
 ---
 
-<html lang="en" style="scroll-behavior: smooth;">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lousmine Elite Travel & Hospitality</title>
-  </head>
-  <body class="m-0 p-0 font-sans text-gray-800 scroll-smooth">
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md fixed top-0 w-full z-50">
-      <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        <div class="flex items-center space-x-2">
-          <img src="/logo.png" alt="Logo" class="h-10 w-auto" />
-          <span class="text-xl font-semibold text-gray-800">Lousmine Elite</span>
-        </div>
-        <div class="flex items-center space-x-4">
-          <select id="language-switch" class="border border-gray-300 rounded px-2 py-1 text-sm">
-            <option value="en">English</option>
-            <option value="ar">Arabic</option>
-            <option value="so">Somali</option>
-          </select>
-          <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-        <ul id="menu" class="hidden md:flex space-x-6 text-sm font-medium">
-          <li><a href="#home" class="hover:text-yellow-500">Home</a></li>
-          <li><a href="#about" class="hover:text-yellow-500">About</a></li>
-          <li><a href="#services" class="hover:text-yellow-500">Services</a></li>
-          <li><a href="#contact" class="hover:text-yellow-500">Contact</a></li>
-        </ul>
-      </div>
-      <ul id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 text-sm font-medium bg-white">
-        <li><a href="#home" class="block py-2 hover:text-yellow-500">Home</a></li>
-        <li><a href="#about" class="block py-2 hover:text-yellow-500">About</a></li>
-        <li><a href="#services" class="block py-2 hover:text-yellow-500">Services</a></li>
-        <li><a href="#contact" class="block py-2 hover:text-yellow-500">Contact</a></li>
-      </ul>
-    </nav>
+<SEO 
+  title="Lousmine Elite Travel & Hospitality – Luxury Travel Services"
+  description="Explore luxury travel packages, premium hospitality, airport transfers, and 5-star hotel bookings with Lousmine Elite Travel & Hospitality. Serving Gulf clients with excellence."
+  image="/cover-image.jpg"
+  url="https://lousmineelite.net"
+/>
 
-    <script>
-      const toggle = document.getElementById('menu-toggle');
-      const menu = document.getElementById('mobile-menu');
+<!-- Font Awesome for social icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papm1OzZLzGKQ2t9wOt1dRjBDA1KnGb9bgmKjRj0+1Tj3/xKMqN8E5v7ENM1oz6cDwEpoJGkM15Zr4BbV7a7eQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Navigation Bar -->
+<nav class="bg-white shadow-md fixed top-0 w-full z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <img src="/logo.png" alt="Logo" class="h-10 w-auto" />
+      <span class="text-xl font-semibold text-gray-800">Lousmine Elite</span>
+    </div>
+    <div class="flex items-center space-x-4">
+      <select id="language-switch" class="border border-gray-300 rounded px-2 py-1 text-sm">
+        <option value="en">English</option>
+        <option value="ar">Arabic</option>
+        <option value="so">Somali</option>
+      </select>
+      <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <ul id="menu" class="hidden md:flex space-x-6 text-sm font-medium">
+      <li><a href="#home" class="hover:text-yellow-500">Home</a></li>
+      <li><a href="#about" class="hover:text-yellow-500">About</a></li>
+      <li><a href="#services" class="hover:text-yellow-500">Services</a></li>
+      <li><a href="#contact" class="hover:text-yellow-500">Contact</a></li>
+    </ul>
+  </div>
+  <ul id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 text-sm font-medium bg-white">
+    <li><a href="#home" class="block py-2 hover:text-yellow-500">Home</a></li>
+    <li><a href="#about" class="block py-2 hover:text-yellow-500">About</a></li>
+    <li><a href="#services" class="block py-2 hover:text-yellow-500">Services</a></li>
+    <li><a href="#contact" class="block py-2 hover:text-yellow-500">Contact</a></li>
+  </ul>
+</nav>
+
+<script>
+  if (typeof window !== 'undefined') {
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    if (toggle && menu) {
       toggle.addEventListener('click', () => {
         menu.classList.toggle('hidden');
       });
-      document.getElementById('language-switch').addEventListener('change', function () {
+    }
+    const langSwitch = document.getElementById('language-switch');
+    if (langSwitch) {
+      langSwitch.addEventListener('change', function () {
         const lang = this.value;
-        alert(`Language switched to: ${lang} (Multilingual content integration coming soon)`);
+        alert(`Language switched to: ${lang} (Multilingual coming soon)`);
       });
-    </script>
+    }
+  }
+</script>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative h-[40vh] md:h-[45vh] bg-cover bg-center text-white flex flex-col justify-center items-center px-6 pt-32" style="background-image: url('/bg.jpeg');">
-      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-      <div class="relative text-center z-10">
-        <h1 class="text-2xl md:text-4xl font-bold drop-shadow-md">Lousmine Elite<br />Travel & Hospitality</h1>
-        <p class="mt-3 text-base md:text-lg max-w-xl mx-auto drop-shadow-md">It’s the beginning of your journey – where safety meets luxury and service meets excellence</p>
-        <a href="#booking" class="mt-4 inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-6 rounded-md text-sm shadow-md">BOOK NOW</a>
-      </div>
-    </section>
+<Layout>
+  <!-- Hero Section -->
+  <section id="home" class="relative h-[70vh] md:h-[80vh] text-white flex items-center justify-center text-center"
+           style="background-image: url('/bg.jpeg'); background-size: cover; background-position: center;">
+    <div class="bg-black bg-opacity-60 px-6 py-8 rounded-md shadow-lg max-w-2xl mx-auto">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4">Lousmine Elite Travel & Hospitality</h1>
+      <p class="text-base md:text-lg mb-6">
+        Start your journey with safety, luxury, and unmatched service.
+      </p>
+      <a href="#contact" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-6 rounded-full shadow-md transition">
+        BOOK NOW
+      </a>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-100 text-center">
-      <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-6">About Us</h2>
-        <p class="text-lg text-gray-700 mb-8">
-          At Lousmine Elite, we provide top-tier travel and hospitality services tailored for Gulf travelers. Our goal is to deliver safe, luxurious, and unforgettable experiences.
-        </p>
-        <div class="mb-8">
-          <h3 class="text-2xl font-semibold mb-2">Our Mission</h3>
-          <p class="text-gray-700">
-            To redefine the luxury travel experience by offering exclusive, secure, and seamless hospitality solutions for discerning clients.
-          </p>
-        </div>
-        <div class="mb-8">
-          <h3 class="text-2xl font-semibold mb-2">Our Vision</h3>
-          <p class="text-gray-700">
-            To become the leading luxury travel and hospitality brand trusted by Gulf travelers across the globe.
-          </p>
-        </div>
-        <div>
-          <h3 class="text-2xl font-semibold mb-2">Message from the Founder</h3>
-          <p class="text-gray-700">
-            "At Lousmine Elite, our commitment is to excellence, safety, and memorable journeys. Every guest is a VIP, and every detail matters."
-            <br />
-            <strong>- Osman Ahmed Omar, Founder & Managing Director</strong>
-          </p>
-        </div>
-      </div>
-    </section>
+  <!-- About Us Section -->
+  <section id="about" class="py-12 px-6 bg-white text-gray-800 text-center max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4">About Us</h2>
+    <p class="text-lg leading-relaxed mb-6">
+      Lousmine Elite Travel & Hospitality is a premium service provider based in the UK, specializing in luxury travel
+      and hospitality services tailored for Gulf clients. With over a decade of experience in travel consultancy, we pride ourselves
+      in creating unforgettable experiences rooted in excellence, trust, and personalized care.
+    </p>
+    <div class="mb-8">
+      <h3 class="text-xl font-semibold mb-2">Our Mission</h3>
+      <p class="text-gray-700">
+        To redefine the landscape of luxury travel by offering bespoke, secure, and seamless experiences that exceed the expectations of our elite clientele. We strive to provide world-class service that is both personalized and memorable.
+      </p>
+    </div>
+    <div class="mb-8">
+      <h3 class="text-xl font-semibold mb-2">Our Vision</h3>
+      <p class="text-gray-700">
+        To be the most trusted name in luxury travel and hospitality for Gulf clients globally, known for integrity, reliability, and extraordinary service.
+      </p>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold mb-2">Message from the Founder & Managing Director</h3>
+      <p class="text-gray-700">
+        "At Lousmine Elite, we believe that travel is more than just a destination—it’s a lifestyle. Our goal is to deliver exceptional journeys with a human touch, ensuring that every client feels uniquely valued. With deep roots in Gulf culture and a passion for excellence, we are honored to serve those who expect nothing but the best."
+        <br />
+        <strong>- Osman Ahmed Omar, Founder & Managing Director</strong>
+      </p>
+    </div>
+  </section>
 
-<<<<<<< HEAD
-    <!-- Footer -->
-    <footer class="bg-white py-6 text-center text-sm text-gray-500">
-      <div class="mb-2">&copy; 2025 Lousmine Elite Travel & Hospitality. All rights reserved.</div>
-      <div class="space-x-4">
-        <a href="#" class="hover:text-blue-600">Facebook</a>
-        <a href="#" class="hover:text-blue-400">Twitter</a>
-        <a href="#" class="hover:text-pink-500">Instagram</a>
-        <a href="#" class="hover:text-blue-700">LinkedIn</a>
+  <!-- Services Section -->
+  <section id="services" class="py-12 px-6 bg-gray-100 text-center">
+    <h2 class="text-2xl font-bold mb-4">Our Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="font-semibold text-lg mb-2">Luxury Travel Packages</h3>
+        <p>Curated experiences across Europe and the Middle East for Gulf travelers.</p>
       </div>
-    </footer>
-=======
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-white text-center">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-10">Our Services</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="p-6 shadow-md bg-gray-50 rounded-md"><h3 class="text-xl font-semibold mb-2">Luxury Airport Transfers</h3><p class="text-gray-600">Exclusive airport pick-up and drop-off services with premium vehicles.</p></div>
-          <div class="p-6 shadow-md bg-gray-50 rounded-md"><h3 class="text-xl font-semibold mb-2">Private Chauffeurs</h3><p class="text-gray-600">Professional and multilingual personal drivers.</p></div>
-          <div class="p-6 shadow-md bg-gray-50 rounded-md"><h3 class="text-xl font-semibold mb-2">Hotel & Villa Booking</h3><p class="text-gray-600">Handpicked luxury accommodations tailored to your preference.</p></div>
-          <div class="p-6 shadow-md bg-gray-50 rounded-md"><h3 class="text-xl font-semibold mb-2">Visa Processing</h3><p class="text-gray-600">Fast, reliable assistance with tourist and business visa applications.</p></div>
-          <div class="p-6 shadow-md bg-gray-50 rounded-md"><h3 class="text-xl font-semibold mb-2">Private Jet Booking</h3><p class="text-gray-600">Fly in style with our elite private jet charter services.</p></div>
-          <div class="p-6 shadow-md bg-gray-50 rounded-md"><h3 class="text-xl font-semibold mb-2">Yacht Charter</h3><p class="text-gray-600">Luxury yacht rentals for leisure and events.</p></div>
-          <div class="p-6 shadow-md bg-gray-50 rounded-md"><h3 class="text-xl font-semibold mb-2">Event Management</h3><p class="text-gray-600">From weddings to business events, we handle it all elegantly.</p></div>
-          <div class="p-6 shadow-md bg-gray-50 rounded-md"><h3 class="text-xl font-semibold mb-2">Concierge Services</h3><p class="text-gray-600">Personalized 24/7 support for all your travel needs.</p></div>
-          <div class="p-6 shadow-md bg-gray-50 rounded-md"><h3 class="text-xl font-semibold mb-2">Shopping Assistance</h3><p class="text-gray-600">Exclusive access to luxury brands and personal stylists.</p></div>
-        </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="font-semibold text-lg mb-2">Airport Transfers</h3>
+        <p>Premium pickup and drop-off services with elite vehicles and chauffeurs.</p>
       </div>
-    </section>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="font-semibold text-lg mb-2">Hotel Bookings</h3>
+        <p>5-star hotel reservations at the best rates, tailored to your itinerary.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Booking Form Section -->
-    <section id="booking" class="py-20 bg-white text-center">
-      <div class="max-w-3xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-6">Book Your Journey</h2>
-        <form class="space-y-4 text-left">
-          <input type="text" placeholder="Full Name" class="w-full border border-gray-300 rounded-md p-3" required>
-          <input type="email" placeholder="Email Address" class="w-full border border-gray-300 rounded-md p-3" required>
-          <input type="text" placeholder="Destination" class="w-full border border-gray-300 rounded-md p-3" required>
-          <textarea placeholder="Additional Notes" rows="4" class="w-full border border-gray-300 rounded-md p-3"></textarea>
-          <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-md">Submit</button>
-        </form>
+  <!-- Client Testimonials Section -->
+  <section id="testimonials" class="py-12 px-6 bg-white text-center">
+    <h2 class="text-2xl font-bold mb-6">What Our Clients Say</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="bg-gray-100 p-6 rounded-lg shadow">
+        <p class="italic">“Exceptional service! Our honeymoon in London was seamless and luxurious from start to finish.”</p>
+        <p class="mt-4 font-semibold">– Aisha M., Doha</p>
       </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-100 text-center">
-      <div class="max-w-3xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
-        <p class="text-gray-700 mb-6">For bookings, questions, or inquiries, feel free to reach out to us via WhatsApp or the form above.</p>
-        <p class="text-gray-700">WhatsApp: <a href="https://wa.me/0097455189022" class="text-green-600 font-semibold">+00974 5518 9022</a></p>
+      <div class="bg-gray-100 p-6 rounded-lg shadow">
+        <p class="italic">“The airport pickup and hotel booking were perfectly arranged. I felt like royalty.”</p>
+        <p class="mt-4 font-semibold">– Khalid A., Riyadh</p>
       </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="bg-white py-16 text-center">
-      <h2 class="text-3xl font-bold mb-6">Client Testimonials</h2>
-      <p class="text-gray-700 italic max-w-2xl mx-auto">“Excellent service from start to finish. Highly recommend!”</p>
-    </section>
->>>>>>> 78cfec3 (Restore missing sections: booking, services, contact, testimonials)
-
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/0097455189022" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white rounded-full shadow-lg p-4 z-50 hover:bg-green-600">
-      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M20.52 3.48A11.75 11.75 0 0 0 3.48 20.52L2 24l3.48-1.48A11.75 11.75 0 0 0 24 11.75 11.68 11.68 0 0 0 20.52 3.48zM12 21.5c-1.8 0-3.55-.47-5.1-1.37l-.37-.21-2.03.86.43-2.12-.22-.36A9.54 9.54 0 1 1 21.5 12c0 5.25-4.25 9.5-9.5 9.5zm5.3-7.57c-.29-.15-1.74-.86-2.01-.96s-.47-.15-.67.15-.76.96-.93 1.15-.34.22-.63.07a7.67 7.67 0 0 1-2.26-1.39 8.52 8.52 0 0 1-1.57-1.94c-.16-.28-.02-.43.12-.58.13-.13.29-.34.43-.51.14-.17.19-.28.29-.48.1-.2.05-.37-.02-.52s-.67-1.61-.92-2.21c-.24-.57-.48-.5-.67-.51h-.57a1.1 1.1 0 0 0-.8.37c-.28.3-1.07 1.05-1.07 2.55s1.1 2.97 1.25 3.18c.15.2 2.16 3.3 5.24 4.63 3.07 1.34 3.07.89 3.63.84.56-.05 1.74-.71 1.99-1.39.25-.68.25-1.27.18-1.39-.08-.13-.26-.2-.54-.34z"/>
-      </svg>
-    </a>
-  </body>
-</html>
-<<<<<<< HEAD
-=======
-<!-- Footer -->
-    <footer class="bg-white py-6 text-center text-sm text-gray-500">
-      <div class="mb-2">&copy; 2025 Lousmine Elite Travel & Hospitality. All rights reserved.</div>
-      <div class="space-x-4">
-        <a href="#" class="hover:text-blue-600">Facebook</a>
-        <a href="#" class="hover:text-blue-400">Twitter</a>
-        <a href="#" class="hover:text-pink-500">Instagram</a>
-        <a href="#" class="hover:text-blue-700">LinkedIn</a>
+      <div class="bg-gray-100 p-6 rounded-lg shadow">
+        <p class="italic">“Professional team and quick response. Highly recommended for family holidays.”</p>
+        <p class="mt-4 font-semibold">– Noor S., Dubai</p>
       </div>
-    </footer>
->>>>>>> 78cfec3 (Restore missing sections: booking, services, contact, testimonials)
+    </div>
+  </section>
+
+  <!-- Booking Form Section -->
+  <section id="booking" class="py-12 px-6 bg-white text-center max-w-2xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4">Book Your Experience</h2>
+    <form class="space-y-4">
+      <input type="text" placeholder="Full Name" class="w-full p-3 border rounded" required />
+      <input type="email" placeholder="Email Address" class="w-full p-3 border rounded" required />
+      <input type="text" placeholder="Destination" class="w-full p-3 border rounded" required />
+      <textarea placeholder="Your Message" class="w-full p-3 border rounded" rows="4"></textarea>
+      <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-6 rounded-full shadow-md transition">Submit</button>
+    </form>
+  </section>
+
+  <!-- Social Media Section -->
+  <section id="social-media" class="py-10 bg-white text-center">
+    <h2 class="text-xl font-bold mb-4">Follow Us</h2>
+    <div class="flex justify-center gap-6 text-2xl">
+      <a href="https://facebook.com/lousmineelite" aria-label="Facebook" class="hover:text-blue-600">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://instagram.com/lousmineelite" aria-label="Instagram" class="hover:text-pink-500">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/97455189022" aria-label="WhatsApp" class="hover:text-green-500">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-12 px-6 bg-gray-100 text-center">
+    <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+    <p class="text-lg">Email: lousmineelite@gmail.com | Phone: +974 5518 9022</p>
+    <div class="mt-4 space-x-4">
+      <a href="https://facebook.com/lousmineelite" class="text-blue-600 font-medium">Facebook</a>
+      <a href="https://instagram.com/lousmineelite" class="text-pink-600 font-medium">Instagram</a>
+      <a href="https://wa.me/97455189022" class="text-green-600 font-medium">WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- WhatsApp Floating Icon -->
+  <a href="https://wa.me/97455189022" class="fixed bottom-6 right-6 z-50">
+    <img src="/whatsapp-icon.png" alt="WhatsApp" class="w-12 h-12" />
+  </a>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p class="text-sm">© 2025 Lousmine Elite Travel & Hospitality. All rights reserved.</p>
+  </footer>
