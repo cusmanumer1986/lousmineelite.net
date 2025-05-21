@@ -113,7 +113,7 @@ Sitemap: https://lousmineelite.net/sitemap.xml
 </script>
 
 <Layout>
-<<<<<<< HEAD
+
   <!-- Hero Section -->
   <section id="home" class="relative h-[70vh] md:h-[80vh] text-white flex items-center justify-center text-center"
            style="background-image: url('/bg.jpeg'); background-size: cover; background-position: center;">
@@ -308,3 +308,36 @@ Sitemap: https://lousmineelite.net/sitemap.xml
   </footer>
 </Layout>
 >>>>>>> bd9e468 (Final SEO-optimized version with all components)
+
+<script type="module" is:inline>
+  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+  const supabaseUrl = 'https://sdkujfcuokeagcipjqau.supabase.co'
+  const supabaseKey = 'YOUR_PUBLIC_ANON_KEY_HERE' // ➜ badal KEY-ga
+
+  const db = createClient(supabaseUrl, supabaseKey)
+
+  const form = document.querySelector('form')
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault()
+
+    const name = form.querySelector('input[placeholder="Full Name"]').value
+    const email = form.querySelector('input[placeholder="Email Address"]').value
+    const destination = form.querySelector('input[placeholder="Destination"]').value
+    const message = form.querySelector('textarea[placeholder="Your Message"]').value
+
+    const { error } = await db.from('bookings').insert([{
+      name,
+      email,
+      destination,
+      message
+    }])
+
+    if (error) {
+      alert('Booking Failed: ' + error.message)
+    } else {
+      alert('Booking Successful!')
+      form.reset()
+    }
+  })
+</script>
