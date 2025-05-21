@@ -10,9 +10,51 @@ import { SEO } from '../components/SEO.astro'
   url="https://lousmineelite.net"
 />
 
+<<<<<<< HEAD
 <!-- Font Awesome for social icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papm1OzZLzGKQ2t9wOt1dRjBDA1KnGb9bgmKjRj0+1Tj3/xKMqN8E5v7ENM1oz6cDwEpoJGkM15Zr4BbV7a7eQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+=======
+<!-- Canonical link for SEO -->
+<link rel="canonical" href="https://lousmineelite.net/" />
+
+<!-- Font Awesome for social icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papm1OzZLzGKQ2t9wOt1dRjBDA1KnGb9bgmKjRj0+1Tj3/xKMqN8E5v7ENM1oz6cDwEpoJGkM15Zr4BbV7a7eQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Structured Data JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Lousmine Elite Travel & Hospitality",
+  "url": "https://lousmineelite.net",
+  "logo": "https://lousmineelite.net/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+97455189022",
+    "contactType": "Customer Service"
+  },
+  "sameAs": [
+    "https://facebook.com/lousmineelite",
+    "https://instagram.com/lousmineelite",
+    "https://wa.me/97455189022"
+  ]
+}
+</script>
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="theme-color" content="#ffffff" />
+
+<!-- Robots.txt notice (ensure this file exists in public/) -->
+<!-- robots.txt -->
+<!--
+User-agent: *
+Allow: /
+Sitemap: https://lousmineelite.net/sitemap.xml
+-->
+
+>>>>>>> bd9e468 (Final SEO-optimized version with all components)
 <!-- Navigation Bar -->
 <nav class="bg-white shadow-md fixed top-0 w-full z-50">
   <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
@@ -47,7 +89,11 @@ import { SEO } from '../components/SEO.astro'
   </ul>
 </nav>
 
+<<<<<<< HEAD
 <script>
+=======
+<script is:inline>
+>>>>>>> bd9e468 (Final SEO-optimized version with all components)
   if (typeof window !== 'undefined') {
     const toggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('mobile-menu');
@@ -67,6 +113,7 @@ import { SEO } from '../components/SEO.astro'
 </script>
 
 <Layout>
+<<<<<<< HEAD
   <!-- Hero Section -->
   <section id="home" class="relative h-[70vh] md:h-[80vh] text-white flex items-center justify-center text-center"
            style="background-image: url('/bg.jpeg'); background-size: cover; background-position: center;">
@@ -150,6 +197,57 @@ import { SEO } from '../components/SEO.astro'
   </section>
 
   <!-- Booking Form Section -->
+=======
+  <section id="home" class="relative h-[70vh] md:h-[80vh] text-white flex items-center justify-center text-center" style="background-image: url('/bg.jpeg'); background-size: cover; background-position: center;">
+    <div class="bg-black bg-opacity-60 px-6 py-8 rounded-md shadow-lg max-w-2xl mx-auto">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4">Lousmine Elite Travel & Hospitality</h1>
+      <p class="text-base md:text-lg mb-6">Start your journey with safety, luxury, and unmatched service.</p>
+      <a href="#contact" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-6 rounded-full shadow-md transition">BOOK NOW</a>
+    </div>
+  </section>
+
+  <section id="about" class="py-12 px-6 bg-white text-gray-800 text-center max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4">About Us</h2>
+    <p class="text-lg leading-relaxed mb-6">Lousmine Elite Travel & Hospitality is a premium service provider based in the UK, specializing in luxury travel and hospitality services tailored for Gulf clients.</p>
+    <div class="mb-8">
+      <h3 class="text-xl font-semibold mb-2">Our Mission</h3>
+      <p class="text-gray-700">To redefine luxury travel by offering bespoke, secure, and seamless experiences for our elite clientele.</p>
+    </div>
+    <div class="mb-8">
+      <h3 class="text-xl font-semibold mb-2">Our Vision</h3>
+      <p class="text-gray-700">To be the most trusted name in luxury travel and hospitality across the Gulf region and beyond.</p>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold mb-2">Message from the Founder</h3>
+      <p class="text-gray-700">"At Lousmine Elite, every journey is curated with care, excellence, and attention to detail. We aim to deliver unforgettable moments to every traveler."<br /><strong>- Osman Ahmed Omar</strong></p>
+    </div>
+  </section>
+
+  <section id="services" class="py-12 px-6 bg-gray-100 text-center">
+  <h2 class="text-2xl font-bold mb-4">Our Services</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Luxury Packages</h3><p>Europe & Gulf curated tours for elite travelers.</p></div>
+    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Airport Transfers</h3><p>Premium airport pickup and drop-off with private drivers.</p></div>
+    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Hotel Bookings</h3><p>5-star and boutique hotel arrangements at top rates.</p></div>
+    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Private Chauffeurs</h3><p>Multilingual, professional chauffeurs for city and event travel.</p></div>
+    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Visa Assistance</h3><p>Fast and reliable visa processing for tourism and business.</p></div>
+    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Yacht Rentals</h3><p>Luxury yachts for private leisure or exclusive events.</p></div>
+    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Private Jet Charters</h3><p>Book elite jets for high-end business or leisure travel.</p></div>
+    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Event Management</h3><p>Full-service planning for weddings, VIP events, and galas.</p></div>
+    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Shopping Concierge</h3><p>VIP personal shopping and access to premium brands.</p></div>
+  </div>
+</section>
+
+  <section id="testimonials" class="py-12 px-6 bg-white text-center">
+    <h2 class="text-2xl font-bold mb-6">What Our Clients Say</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="bg-gray-100 p-6 rounded-lg shadow"><p class="italic">“Exceptional service throughout!”</p><p class="mt-4 font-semibold">– Aisha M., Doha</p></div>
+      <div class="bg-gray-100 p-6 rounded-lg shadow"><p class="italic">“Felt like royalty every step.”</p><p class="mt-4 font-semibold">– Khalid A., Riyadh</p></div>
+      <div class="bg-gray-100 p-6 rounded-lg shadow"><p class="italic">“Highly recommended for luxury trips.”</p><p class="mt-4 font-semibold">– Noor S., Dubai</p></div>
+    </div>
+  </section>
+
+>>>>>>> bd9e468 (Final SEO-optimized version with all components)
   <section id="booking" class="py-12 px-6 bg-white text-center max-w-2xl mx-auto">
     <h2 class="text-2xl font-bold mb-4">Book Your Experience</h2>
     <form class="space-y-4">
@@ -161,6 +259,7 @@ import { SEO } from '../components/SEO.astro'
     </form>
   </section>
 
+<<<<<<< HEAD
   <!-- Social Media Section -->
   <section id="social-media" class="py-10 bg-white text-center">
     <h2 class="text-xl font-bold mb-4">Follow Us</h2>
@@ -178,6 +277,8 @@ import { SEO } from '../components/SEO.astro'
   </section>
 
   <!-- Contact Section -->
+=======
+>>>>>>> bd9e468 (Final SEO-optimized version with all components)
   <section id="contact" class="py-12 px-6 bg-gray-100 text-center">
     <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
     <p class="text-lg">Email: lousmineelite@gmail.com | Phone: +974 5518 9022</p>
@@ -188,12 +289,22 @@ import { SEO } from '../components/SEO.astro'
     </div>
   </section>
 
+<<<<<<< HEAD
   <!-- WhatsApp Floating Icon -->
+=======
+>>>>>>> bd9e468 (Final SEO-optimized version with all components)
   <a href="https://wa.me/97455189022" class="fixed bottom-6 right-6 z-50">
     <img src="/whatsapp-icon.png" alt="WhatsApp" class="w-12 h-12" />
   </a>
 
+<<<<<<< HEAD
   <!-- Footer Section -->
   <footer class="bg-gray-900 text-white py-6 text-center">
     <p class="text-sm">© 2025 Lousmine Elite Travel & Hospitality. All rights reserved.</p>
   </footer>
+=======
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p class="text-sm">© 2025 Lousmine Elite Travel & Hospitality. All rights reserved.</p>
+  </footer>
+</Layout>
+>>>>>>> bd9e468 (Final SEO-optimized version with all components)
