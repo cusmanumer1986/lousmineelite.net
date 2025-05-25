@@ -3,340 +3,180 @@ import Layout from '../layouts/Layout.astro'
 import { SEO } from '../components/SEO.astro'
 ---
 
-<SEO 
-  title="Lousmine Elite Travel & Hospitality – Luxury Travel Services"
-  description="Explore luxury travel packages, premium hospitality, airport transfers, and 5-star hotel bookings with Lousmine Elite Travel & Hospitality. Serving Gulf clients with excellence."
-  image="/cover-image.jpg"
-  url="https://lousmineelite.net"
-/>
-
-
-<!-- Font Awesome for social icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papm1OzZLzGKQ2t9wOt1dRjBDA1KnGb9bgmKjRj0+1Tj3/xKMqN8E5v7ENM1oz6cDwEpoJGkM15Zr4BbV7a7eQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-<!-- Canonical link for SEO -->
-<link rel="canonical" href="https://lousmineelite.net/" />
-
-<!-- Font Awesome for social icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papm1OzZLzGKQ2t9wOt1dRjBDA1KnGb9bgmKjRj0+1Tj3/xKMqN8E5v7ENM1oz6cDwEpoJGkM15Zr4BbV7a7eQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Lousmine Elite Travel & Hospitality",
-  "url": "https://lousmineelite.net",
-  "logo": "https://lousmineelite.net/logo.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+97455189022",
-    "contactType": "Customer Service"
-  },
-  "sameAs": [
-    "https://facebook.com/lousmineelite",
-    "https://instagram.com/lousmineelite",
-    "https://wa.me/97455189022"
-  ]
-}
-</script>
-
-<!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<meta name="theme-color" content="#ffffff" />
-
-<!-- Robots.txt notice (ensure this file exists in public/) -->
-<!-- robots.txt -->
-<!--
-User-agent: *
-Allow: /
-Sitemap: https://lousmineelite.net/sitemap.xml
--->
-
- bd9e468 (Final SEO-optimized version with all components)
-<!-- Navigation Bar -->
-<nav class="bg-white shadow-md fixed top-0 w-full z-50">
-  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-    <div class="flex items-center space-x-2">
-      <img src="/logo.png" alt="Logo" class="h-10 w-auto" />
-      <span class="text-xl font-semibold text-gray-800">Lousmine Elite</span>
-    </div>
-    <div class="flex items-center space-x-4">
-      <select id="language-switch" class="border border-gray-300 rounded px-2 py-1 text-sm">
-        <option value="en">English</option>
-        <option value="ar">Arabic</option>
-        <option value="so">Somali</option>
-      </select>
-      <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-    <ul id="menu" class="hidden md:flex space-x-6 text-sm font-medium">
-      <li><a href="#home" class="hover:text-yellow-500">Home</a></li>
-      <li><a href="#about" class="hover:text-yellow-500">About</a></li>
-      <li><a href="#services" class="hover:text-yellow-500">Services</a></li>
-      <li><a href="#contact" class="hover:text-yellow-500">Contact</a></li>
-    </ul>
-  </div>
-  <ul id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 text-sm font-medium bg-white">
-    <li><a href="#home" class="block py-2 hover:text-yellow-500">Home</a></li>
-    <li><a href="#about" class="block py-2 hover:text-yellow-500">About</a></li>
-    <li><a href="#services" class="block py-2 hover:text-yellow-500">Services</a></li>
-    <li><a href="#contact" class="block py-2 hover:text-yellow-500">Contact</a></li>
-  </ul>
-</nav>
-
-<script>
-
-<script is:inline>
- bd9e468 (Final SEO-optimized version with all components)
-  if (typeof window !== 'undefined') {
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-    if (toggle && menu) {
-      toggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-      });
-    }
-    const langSwitch = document.getElementById('language-switch');
-    if (langSwitch) {
-      langSwitch.addEventListener('change', function () {
-        const lang = this.value;
-        alert(`Language switched to: ${lang} (Multilingual coming soon)`);
-      });
-    }
-  }
-</script>
-
 <Layout>
+  <SEO 
+    title="Lousmine Elite Travel & Hospitality – Luxury Travel Services"
+    description="Explore luxury travel packages, premium hospitality, airport transfers, and 5-star hotel bookings with Lousmine Elite Travel & Hospitality. Serving Gulf clients with excellence."
+    image="/hero-bg.jpg"
+    url="https://lousmineelite.net"
+  />
 
-  <!-- Hero Section -->
-  <section id="home" class="relative h-[70vh] md:h-[80vh] text-white flex items-center justify-center text-center"
-           style="background-image: url('/bg.jpeg'); background-size: cover; background-position: center;">
-    <div class="bg-black bg-opacity-60 px-6 py-8 rounded-md shadow-lg max-w-2xl mx-auto">
-      <h1 class="text-3xl md:text-5xl font-bold mb-4">Lousmine Elite Travel & Hospitality</h1>
-      <p class="text-base md:text-lg mb-6">
-        Start your journey with safety, luxury, and unmatched service.
-      </p>
-      <a href="#contact" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-6 rounded-full shadow-md transition">
-        BOOK NOW
-      </a>
-    </div>
-  </section>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- About Us Section -->
-  <section id="about" class="py-12 px-6 bg-white text-gray-800 text-center max-w-3xl mx-auto">
-    <h2 class="text-2xl font-bold mb-4">About Us</h2>
-    <p class="text-lg leading-relaxed mb-6">
-      Lousmine Elite Travel & Hospitality is a premium service provider based in the UK, specializing in luxury travel
-      and hospitality services tailored for Gulf clients. With over a decade of experience in travel consultancy, we pride ourselves
-      in creating unforgettable experiences rooted in excellence, trust, and personalized care.
-    </p>
-    <div class="mb-8">
-      <h3 class="text-xl font-semibold mb-2">Our Mission</h3>
-      <p class="text-gray-700">
-        To redefine the landscape of luxury travel by offering bespoke, secure, and seamless experiences that exceed the expectations of our elite clientele. We strive to provide world-class service that is both personalized and memorable.
-      </p>
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="text-xl font-bold text-yellow-600"><i class="fas fa-plane-departure mr-1"></i> Lousmine Elite</div>
+      <ul class="flex gap-6 text-sm font-medium">
+        <li><a href="#about" class="hover:text-yellow-500"><i class="fas fa-info-circle mr-1"></i>About</a></li>
+        <li><a href="#mission" class="hover:text-yellow-500"><i class="fas fa-bullseye mr-1"></i>Mission</a></li>
+        <li><a href="#services" class="hover:text-yellow-500"><i class="fas fa-concierge-bell mr-1"></i>Services</a></li>
+        <li><a href="#booking" class="hover:text-yellow-500"><i class="fas fa-calendar-check mr-1"></i>Book</a></li>
+        <li><a href="#contact" class="hover:text-yellow-500"><i class="fas fa-envelope mr-1"></i>Contact</a></li>
+      </ul>
     </div>
-    <div class="mb-8">
-      <h3 class="text-xl font-semibold mb-2">Our Vision</h3>
-      <p class="text-gray-700">
-        To be the most trusted name in luxury travel and hospitality for Gulf clients globally, known for integrity, reliability, and extraordinary service.
-      </p>
-    </div>
-    <div>
-      <h3 class="text-xl font-semibold mb-2">Message from the Founder & Managing Director</h3>
-      <p class="text-gray-700">
-        "At Lousmine Elite, we believe that travel is more than just a destination—it’s a lifestyle. Our goal is to deliver exceptional journeys with a human touch, ensuring that every client feels uniquely valued. With deep roots in Gulf culture and a passion for excellence, we are honored to serve those who expect nothing but the best."
-        <br />
-        <strong>- Osman Ahmed Omar, Founder & Managing Director</strong>
-      </p>
-    </div>
-  </section>
+  </nav>
 
-  <!-- Services Section -->
-  <section id="services" class="py-12 px-6 bg-gray-100 text-center">
-    <h2 class="text-2xl font-bold mb-4">Our Services</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h3 class="font-semibold text-lg mb-2">Luxury Travel Packages</h3>
-        <p>Curated experiences across Europe and the Middle East for Gulf travelers.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h3 class="font-semibold text-lg mb-2">Airport Transfers</h3>
-        <p>Premium pickup and drop-off services with elite vehicles and chauffeurs.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h3 class="font-semibold text-lg mb-2">Hotel Bookings</h3>
-        <p>5-star hotel reservations at the best rates, tailored to your itinerary.</p>
+  <!-- Hero -->
+  <section class="relative bg-cover bg-center h-screen pt-20" style="background-image: url('/hero-bg.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+      <div class="text-center text-white px-6">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Lousmine Elite <br /> Travel & Hospitality</h1>
+        <p class="mb-6 text-lg md:text-xl">Where Gulf Elegance Meets World-Class Travel</p>
+        <a href="#booking" class="bg-yellow-400 text-black px-6 py-3 rounded font-bold hover:bg-yellow-500 transition">BOOK NOW</a>
       </div>
     </div>
   </section>
 
-  <!-- Client Testimonials Section -->
-  <section id="testimonials" class="py-12 px-6 bg-white text-center">
-    <h2 class="text-2xl font-bold mb-6">What Our Clients Say</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-      <div class="bg-gray-100 p-6 rounded-lg shadow">
-        <p class="italic">“Exceptional service! Our honeymoon in London was seamless and luxurious from start to finish.”</p>
-        <p class="mt-4 font-semibold">– Aisha M., Doha</p>
+  <!-- About -->
+  <section id="about" class="py-16 bg-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-4"><i class="fas fa-info-circle mr-2"></i>About Us</h2>
+      <p class="text-lg text-gray-700">Lousmine Elite offers luxurious, customized travel solutions for Gulf clients seeking comfort, class, and cultural excellence across Europe and beyond.</p>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section id="mission" class="py-16 bg-gray-50 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-4"><i class="fas fa-bullseye mr-2"></i>Our Mission</h2>
+      <p class="mb-6 text-gray-700">To provide seamless, secure, and elegant travel experiences for clients from the Gulf region, ensuring exceptional care from booking to arrival.</p>
+      <h2 class="text-3xl font-bold mb-4"><i class="fas fa-eye mr-2"></i>Our Vision</h2>
+      <p class="text-gray-700">To become the most trusted luxury travel partner for Gulf clients exploring Europe, known for excellence and cultural understanding.</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16 bg-white text-center">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-10"><i class="fas fa-concierge-bell mr-2"></i>Our Services</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-100 p-6 rounded shadow">
+          <i class="fas fa-hotel text-3xl text-yellow-500 mb-3"></i>
+          <h3 class="text-xl font-semibold mb-2">Hotel Bookings</h3>
+          <p>Access to the best 4–5 star hotels in city centers across Europe.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded shadow">
+          <i class="fas fa-car text-3xl text-yellow-500 mb-3"></i>
+          <h3 class="text-xl font-semibold mb-2">Airport Transfers</h3>
+          <p>Private, reliable, and luxury transportation from and to airports.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded shadow">
+          <i class="fas fa-passport text-3xl text-yellow-500 mb-3"></i>
+          <h3 class="text-xl font-semibold mb-2">Visa Support</h3>
+          <p>Personalized visa consultation for all your travel destinations.</p>
+        </div>
       </div>
-      <div class="bg-gray-100 p-6 rounded-lg shadow">
-        <p class="italic">“The airport pickup and hotel booking were perfectly arranged. I felt like royalty.”</p>
-        <p class="mt-4 font-semibold">– Khalid A., Riyadh</p>
-      </div>
-      <div class="bg-gray-100 p-6 rounded-lg shadow">
-        <p class="italic">“Professional team and quick response. Highly recommended for family holidays.”</p>
-        <p class="mt-4 font-semibold">– Noor S., Dubai</p>
-      </div>
     </div>
   </section>
 
-  <!-- Booking Form Section -->
-
-  <section id="home" class="relative h-[70vh] md:h-[80vh] text-white flex items-center justify-center text-center" style="background-image: url('/bg.jpeg'); background-size: cover; background-position: center;">
-    <div class="bg-black bg-opacity-60 px-6 py-8 rounded-md shadow-lg max-w-2xl mx-auto">
-      <h1 class="text-3xl md:text-5xl font-bold mb-4">Lousmine Elite Travel & Hospitality</h1>
-      <p class="text-base md:text-lg mb-6">Start your journey with safety, luxury, and unmatched service.</p>
-      <a href="#contact" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-6 rounded-full shadow-md transition">BOOK NOW</a>
+  <!-- Booking with Supabase -->
+  <section id="booking" class="py-16 bg-gray-50 text-center">
+    <div class="max-w-xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6"><i class="fas fa-calendar-check mr-2"></i>Book Now</h2>
+      <form id="booking-form" class="grid gap-4 text-left">
+        <input id="name" placeholder="Full Name" required class="w-full p-3 border rounded" />
+        <input type="email" id="email" placeholder="Email" required class="w-full p-3 border rounded" />
+        <input id="phone" placeholder="Phone Number" class="w-full p-3 border rounded" />
+        <textarea id="message" rows="4" placeholder="Your Message" class="w-full p-3 border rounded"></textarea>
+        <button type="submit" class="bg-yellow-400 px-6 py-3 rounded font-bold hover:bg-yellow-500 transition">Submit</button>
+      </form>
+      <p id="response-message" class="text-green-600 mt-4 hidden">Thank you! Your booking has been received.</p>
     </div>
   </section>
 
-  <section id="about" class="py-12 px-6 bg-white text-gray-800 text-center max-w-3xl mx-auto">
-    <h2 class="text-2xl font-bold mb-4">About Us</h2>
-    <p class="text-lg leading-relaxed mb-6">Lousmine Elite Travel & Hospitality is a premium service provider based in the UK, specializing in luxury travel and hospitality services tailored for Gulf clients.</p>
-    <div class="mb-8">
-      <h3 class="text-xl font-semibold mb-2">Our Mission</h3>
-      <p class="text-gray-700">To redefine luxury travel by offering bespoke, secure, and seamless experiences for our elite clientele.</p>
-    </div>
-    <div class="mb-8">
-      <h3 class="text-xl font-semibold mb-2">Our Vision</h3>
-      <p class="text-gray-700">To be the most trusted name in luxury travel and hospitality across the Gulf region and beyond.</p>
-    </div>
-    <div>
-      <h3 class="text-xl font-semibold mb-2">Message from the Founder</h3>
-      <p class="text-gray-700">"At Lousmine Elite, every journey is curated with care, excellence, and attention to detail. We aim to deliver unforgettable moments to every traveler."<br /><strong>- Osman Ahmed Omar</strong></p>
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6"><i class="fas fa-envelope mr-2"></i>Contact Us</h2>
+      <p class="mb-2"><i class="fas fa-envelope-open-text text-blue-600 mr-1"></i><a href="mailto:lousmineelite@gmail.com">lousmineelite@gmail.com</a></p>
+      <p><i class="fas fa-phone text-blue-600 mr-1"></i> +44 1234 567890</p>
     </div>
   </section>
 
-  <section id="services" class="py-12 px-6 bg-gray-100 text-center">
-  <h2 class="text-2xl font-bold mb-4">Our Services</h2>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Luxury Packages</h3><p>Europe & Gulf curated tours for elite travelers.</p></div>
-    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Airport Transfers</h3><p>Premium airport pickup and drop-off with private drivers.</p></div>
-    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Hotel Bookings</h3><p>5-star and boutique hotel arrangements at top rates.</p></div>
-    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Private Chauffeurs</h3><p>Multilingual, professional chauffeurs for city and event travel.</p></div>
-    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Visa Assistance</h3><p>Fast and reliable visa processing for tourism and business.</p></div>
-    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Yacht Rentals</h3><p>Luxury yachts for private leisure or exclusive events.</p></div>
-    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Private Jet Charters</h3><p>Book elite jets for high-end business or leisure travel.</p></div>
-    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Event Management</h3><p>Full-service planning for weddings, VIP events, and galas.</p></div>
-    <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Shopping Concierge</h3><p>VIP personal shopping and access to premium brands.</p></div>
-  </div>
-</section>
-
-  <section id="testimonials" class="py-12 px-6 bg-white text-center">
-    <h2 class="text-2xl font-bold mb-6">What Our Clients Say</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-      <div class="bg-gray-100 p-6 rounded-lg shadow"><p class="italic">“Exceptional service throughout!”</p><p class="mt-4 font-semibold">– Aisha M., Doha</p></div>
-      <div class="bg-gray-100 p-6 rounded-lg shadow"><p class="italic">“Felt like royalty every step.”</p><p class="mt-4 font-semibold">– Khalid A., Riyadh</p></div>
-      <div class="bg-gray-100 p-6 rounded-lg shadow"><p class="italic">“Highly recommended for luxury trips.”</p><p class="mt-4 font-semibold">– Noor S., Dubai</p></div>
-    </div>
-  </section>
-
->>>>>>> bd9e468 (Final SEO-optimized version with all components)
-  <section id="booking" class="py-12 px-6 bg-white text-center max-w-2xl mx-auto">
-    <h2 class="text-2xl font-bold mb-4">Book Your Experience</h2>
-    <form class="space-y-4">
-      <input type="text" placeholder="Full Name" class="w-full p-3 border rounded" required />
-      <input type="email" placeholder="Email Address" class="w-full p-3 border rounded" required />
-      <input type="text" placeholder="Destination" class="w-full p-3 border rounded" required />
-      <textarea placeholder="Your Message" class="w-full p-3 border rounded" rows="4"></textarea>
-      <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-6 rounded-full shadow-md transition">Submit</button>
-    </form>
-  </section>
-
-
-  <!-- Social Media Section -->
-  <section id="social-media" class="py-10 bg-white text-center">
-    <h2 class="text-xl font-bold mb-4">Follow Us</h2>
-    <div class="flex justify-center gap-6 text-2xl">
-      <a href="https://facebook.com/lousmineelite" aria-label="Facebook" class="hover:text-blue-600">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://instagram.com/lousmineelite" aria-label="Instagram" class="hover:text-pink-500">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://wa.me/97455189022" aria-label="WhatsApp" class="hover:text-green-500">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-
->>>>>>> bd9e468 (Final SEO-optimized version with all components)
-  <section id="contact" class="py-12 px-6 bg-gray-100 text-center">
-    <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
-    <p class="text-lg">Email: lousmineelite@gmail.com | Phone: +974 5518 9022</p>
-    <div class="mt-4 space-x-4">
-      <a href="https://facebook.com/lousmineelite" class="text-blue-600 font-medium">Facebook</a>
-      <a href="https://instagram.com/lousmineelite" class="text-pink-600 font-medium">Instagram</a>
-      <a href="https://wa.me/97455189022" class="text-green-600 font-medium">WhatsApp</a>
-    </div>
-  </section>
-
-
-  <!-- WhatsApp Floating Icon -->
-
-bd9e468 (Final SEO-optimized version with all components)
-  <a href="https://wa.me/97455189022" class="fixed bottom-6 right-6 z-50">
-    <img src="/whatsapp-icon.png" alt="WhatsApp" class="w-12 h-12" />
+  <!-- WhatsApp Floating Button -->
+  <a 
+    href="https://wa.me/441234567890" 
+    class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition"
+    target="_blank"
+    aria-label="Chat on WhatsApp"
+  >
+    <i class="fab fa-whatsapp text-2xl"></i>
   </a>
 
-
-  <!-- Footer Section -->
-  <footer class="bg-gray-900 text-white py-6 text-center">
-    <p class="text-sm">© 2025 Lousmine Elite Travel & Hospitality. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="bg-black text-white py-10 mt-10">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-6 text-center md:text-left">
+      <div>
+        <h3 class="text-lg font-bold mb-2"><i class="fas fa-globe mr-1"></i> Lousmine Elite</h3>
+        <p>Luxury travel services tailored for Gulf clients seeking premium experiences in Europe.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold mb-2"><i class="fas fa-link mr-1"></i> Quick Links</h3>
+        <ul>
+          <li><a href="#about" class="hover:underline">About</a></li>
+          <li><a href="#services" class="hover:underline">Services</a></li>
+          <li><a href="#booking" class="hover:underline">Book</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold mb-2"><i class="fas fa-share-alt mr-1"></i> Follow Us</h3>
+        <div class="flex gap-4 justify-center md:justify-start">
+          <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-yellow-400"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-6 text-center text-sm text-gray-400">
+      &copy; 2025 Lousmine Elite Travel & Hospitality. All rights reserved.
+    </div>
   </footer>
 
-  <footer class="bg-gray-900 text-white py-6 text-center">
-    <p class="text-sm">© 2025 Lousmine Elite Travel & Hospitality. All rights reserved.</p>
-  </footer>
+  <!-- Supabase Script -->
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+    const SUPABASE_URL = 'https://your-project.supabase.co'
+    const SUPABASE_ANON_KEY = 'your-anon-key'
+
+    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+    const form = document.getElementById('booking-form')
+    const message = document.getElementById('response-message')
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault()
+
+      const name = document.getElementById('name').value
+      const email = document.getElementById('email').value
+      const phone = document.getElementById('phone').value
+      const msg = document.getElementById('message').value
+
+      const { error } = await supabase
+        .from('bookings')
+        .insert([{ name, email, phone, message: msg }])
+
+      if (error) {
+        alert('Error submitting booking. Please try again.')
+        console.error(error)
+      } else {
+        form.reset()
+        message.classList.remove('hidden')
+      }
+    })
+  </script>
+
 </Layout>
- bd9e468 (Final SEO-optimized version with all components)
 
-<script type="module" is:inline>
-  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
-
-  const supabaseUrl = 'https://sdkujfcuokeagcipjqau.supabase.co'
-  const supabaseKey = 'YOUR_PUBLIC_ANON_KEY_HERE' // ➜ badal KEY-ga
-
-  const db = createClient(supabaseUrl, supabaseKey)
-
-  const form = document.querySelector('form')
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault()
-
-    const name = form.querySelector('input[placeholder="Full Name"]').value
-    const email = form.querySelector('input[placeholder="Email Address"]').value
-    const destination = form.querySelector('input[placeholder="Destination"]').value
-    const message = form.querySelector('textarea[placeholder="Your Message"]').value
-
-    const { error } = await db.from('bookings').insert([{
-      name,
-      email,
-      destination,
-      message
-    }])
-
-    if (error) {
-      alert('Booking Failed: ' + error.message)
-    } else {
-      alert('Booking Successful!')
-      form.reset()
-    }
-  })
-</script>
